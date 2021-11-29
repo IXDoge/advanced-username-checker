@@ -23,4 +23,4 @@
 ---------------------------------------
 
 ### Contact
-View my contact information here [website](https://ixdoge.com/)
+View my contact information on my [website](https://ixdoge.com/)
