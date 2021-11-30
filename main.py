@@ -12,19 +12,23 @@ def write_file(arg: str) -> None: # Writes available usernames to users.txt
 
 def start():
     print("""
-    Modes:
-    [1]: Letters + Digits
-    [2]: Letters only
-    [3]: Digits only
+Modes:
+[1]: Letters + Digits
+[2]: Letters only
+[3]: Digits only
     """)
     mode = int(input("Select mode: ")) # Asks the mode you want to use
     if mode == 1: # Checks if the selected mode is 1
         mode = string.ascii_letters + string.digits # Sets the mode to letters & digits
+        print(f"Selected mode: Letters & Digits")
     elif mode == 2:
         mode = string.ascii_letters
+        print(f"Selected mode: Letters")
     elif mode == 3:
         mode = string.digits
+        print(f"Selected mode: Digits")
     letters = int(input("Amount of letters: ")) # Asks for the amount of letters you want to be in a username
+    print(f"Amount of letters set to: {letters}")
     while True:
         code = ('').join(random.choices(mode, k=letters)) # Sets the mode and amount of letters
         r = s.get(f"https://github.com/{code}")
